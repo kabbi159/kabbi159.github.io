@@ -1,9 +1,90 @@
 <!DOCTYPE html>
 <html>
-<head> </head>
+<head></head>
+
+
 <body>
 
-<p> hello </p>
+
+	<div style="border: 1px solid black;">
+	<h3> 세미나 정보 </h3>
+	<ol>
+		<li> 주제: 차세대 웹 표준 기술 HTML </li>
+		<li> 일정 : 5월 12일 14:00 ~ 17:00 </li>
+		<li> 장소 : 공학관 2층 세미나실 </li>
+		<li> 인원 : 선착순 100명 </li>
+		<li> 비용 : 본교 학생 무료 (외부 참가자 5000원) </li>
+		<li> 참가신청 : 아래 양식에 빠짐없이 가입하여 접수해 주세요 </li>
+	</ol>
+
+	</div>
+	
+
+
+
+
+
+	<h3> 개인 정보 </h3>
+	<form action = "particiate.jsp" method ="post">
+	이름&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   	<input type = "text" name = "name" > <br/>
+	비밀번호	<input type ="password" name = "pass"> (수정시 필요) <br/>
+	
+	
+	<h3> 참가 정보 </h3>
+	
+	
+	<div>
+	
+		<fieldset>
+		<legend> 참가 유형 선택 </legend>
+		<input type = "radio" name ="type" value = "free"/> 무료(교내참가자)
+		<input type = "radio" name ="type" value = "fee"/> 유료(교외참가자)
+	
+	</div>
+
+	<br>
+
+	<div>
+	
+		<fieldset>
+		<legend> 관심 분야 선택 </legend>
+		<input type = "radio" name = "interest" value = "html5"/> HTML5 시맨틱
+		<input type = "radio" name = "interest" value = "css3"/> CSS3
+		<input type = "radio" name = "interest" value = "webstorage"/> Web Storage
+		<input type = "radio" name = "interest" value = "websocket"/> Web Socket
+		<input type = "radio" name = "interest" value = "canvas"/> Canvas
+		<input type = "radio" name = "interest" value = "geolocation"/> Geolocation
+	
+	</div>
+
+	<h3> 선택 사항 </h3>
+
+	<p>직업&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<select name = "jobs">
+		<option value = "">가까운 분야 선택 </option>
+		<option value = "student">학생</option>
+		<option value = "webprogramming">웹개발</option>
+		<option value = "webdesign">웹디자인</option>
+		<option value = "education">교육관련</option>
+		<option value = "etc">기타</option>
+	</select>
+	</p>
+			
+	
+	<br>
+	남길 말씀
+	<textarea name = "feedback" rows="5" cols="50"> </textarea>
+	
+
+	<hr/>	
+
+	
+	<input type ="submit" value = "접수하기">
+	<input type ="reset" value = "다시쓰기">
+	</form>
+
+	
+
 
 </body>
 </html>
